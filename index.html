@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <style type="text/css"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+
+    <title>STAR STALKER</title>
+</head>
+
+<body>
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBPlIkVDfeRIG_80eX6rA5FsAF91oSbY80",
+            authDomain: "project0-5ac10.firebaseapp.com",
+            databaseURL: "https://project0-5ac10.firebaseio.com",
+            projectId: "project0-5ac10",
+            storageBucket: "project0-5ac10.appspot.com",
+            messagingSenderId: "272010740897"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h>STAR STALKER</h>
+            <div id="eye">
+                <img src="assets/images/peepingtom.jpg" class="img-rounded" "img-responsive" alt="PeepingTom" width="304" height="236">
+            </div>
+            <audio controls id="soundtrack">
+                <source src="assets/audio/EveryBreathYouTake.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="wrapper">
+            <img src="assets/images/stalker.jpg" class="img-rounded" "img-responsive" width="1140" height="720">
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var database = firebase.database();
+
+        $("#submit-button").click(function() {
+            event.preventDefault();
+            var newName = $("#name").val();
+            var newRole = $("#role").val();
+            var newStart = $("#start").val();
+            var newRate = $("#rate").val();
+            var emp = {
+                name: newName,
+                role: newRole,
+                start: newStart,
+                rate: newRate
+            }
+            console.log(emp);
+
+            database.ref('push').on('child_added',
+                function(childSnap, indx) {
+                    console.log(childSnap.val());
+                    console.log(indx);
+                });
+        });
+
+    </script>
+</body>
+
+
+</html>

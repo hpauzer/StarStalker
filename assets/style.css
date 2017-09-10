@@ -1,0 +1,28 @@
+body {
+    background-color: dimgray;
+}
+
+h {
+    font-family: 'Shadows Into Light', cursive;
+    position: relative;
+    float: left;
+}
+
+.jumbotron {
+    overflow: auto;
+    color: darkred;
+    font: bold;
+    font-size: 110px;
+    background-color: black;
+}
+
+#eye {
+    position: relative;
+    float: right;
+}
+
+#soundtrack {
+    position: relative;
+    float: left;
+    bottom: 0px;
+}
