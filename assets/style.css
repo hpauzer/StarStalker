@@ -26,3 +26,26 @@ h {
     float: left;
     bottom: 0px;
 }
+
+.btn {
+    margin: 10px 20px 25px 5px;
+}
+
+.inputFrame {
+    background-image: url("../assets/images/stalker.png");
+}
+
+.form-group {
+        font-family: 'Shadows Into Light', cursive;
+        color: white;
+        font-size: 24px;
+        font-weight: very strong;
+}
+
+.starFacts {
+        font-family: 'Shadows Into Light', cursive;
+        color: white;
+        font-size: 24px;
+        font-weight: very strong;   
+}
+
