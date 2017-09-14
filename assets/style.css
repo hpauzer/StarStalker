@@ -49,3 +49,14 @@ h {
         font-weight: very strong;   
 }
 
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.bio {
+    background-color: yellow;
+}

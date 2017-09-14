@@ -42,51 +42,47 @@
 
 
         <div class="row inputFrame">
-            <div class="col-lg-6 inputData" <img src="assets/images/stalker.jpg" css {opacity: 0.5}>
+            <div class="col-lg-4 inputData">
                 <div class="form-group">
-                    <label for="userName">User Name:</label>
-                    <input type="text" class="form-control" id="userName">
+                    <label for="userName">Stalker Name:</label>
+                    <input type="text" class="form-control" id="stalker-name">
                 </div>
                 <div class="form-group">
-                    <label for="starName">StarName:</label>
-                    <input type="text" class="form-control" id="starName">
+                    <label for="starFirstName">Star First Name:</label>
+                    <input type="text" class="form-control" id="star-first-name">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <div class="form-group">
+                    <label for="starLastName">Star Last Name:</label>
+                    <input type="text" class="form-control" id="star-last-name">
+                </div>
+                <button type="submit" id="add-star" class="btn btn-default">Submit</button>
             </div>
-
-            <div class="col-lg-6 starFacts">
-                <br>
-                <img src="assets/images/stalker.jpg" class="img-rounded" "img-responsive" height="200px">
-                <br>
-                <div class="birthday">Birthday: </div>
-                <br>
-                <div class="birthplace">Birthplace: </div>
-                <br>
-                <div class="bio">Bio:</div>
-                <br>                
+<!-- Picture and facts -->
+            <div class="col-lg-8 rightPanel">
+                <div class="row">
+                    <div class="col-lg-6 red" id="star_photo">                    
+                    </div>
+                    <div class="col-lg-6 blue">
+                        <div class="birthday">Birthday: </div>
+                        <br>
+                        <div class="birthplace">Birthplace: </div>
+                        <br>
+                        <div class="emotion">Emotion:</div>
+                        <br>                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bio">Bio:
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
 
-
-
- <!--               <form class="form-inline">
-                  <div class="form-group">
-                    <label for="userName"></label>
-                    <input type="text" class="form-control" id="userName" placeholder="User Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="starName"></label>
-                    <input type="text" class="form-control" id="starName" placeholder="Who do you want top stalk?">
-                  </div>
-                  <button type="submit" class="btn btn-default">Send invitation</button>
-                </form> -->              
-
-
-        
 <!--This is the row for four movie posters-->
         <div class="row">
-            <div class= "col-lg-3">
+            <div class= "col-lg-3" id="poster_image">
                 <img src="">
                 <br>
                 <div class="title">Title</div>
@@ -109,6 +105,61 @@
                 <br>
                 <div class="title">Title</div>                   
             </div>
+
+            <div class="panel panel-primary" style="border-top: 0 solid #000507;border-bottom: 0px solid;border-left: 0px solid;border-right: 0px solid #000000;border-radius: 00px">
+                <div class="panel-body" style="background-color: rgba(0, 0, 0, 0.94);border-top-left-radius: 0;color: #1272ec">
+                    <div>
+                        <div class="table-responsive">
+                            <table width="100%" border="1" cellspacing="10px" cellpadding="10px" style="margin: 0;padding: 10px;color: #f2f3f8" class="table-hover">
+                                <caption style="background-color: rgba(53, 81, 110, 0.36);color: #cddcf4;padding: 5px;margin: 0x">
+                                    <h3 style="color: #f4f8fc;text-align: left" class="text-center">FAVORITE STARS TO STALK </h3>
+                                </caption>
+                                <tbody id="star-table" style="border-left: 0 solid;border-right: 0 solid;margin: 0;padding: 0">
+                                    <tr style="padding: 5px">
+                                        <th scope="col">MY STALKER HANDLE</th>
+                                        <th scope="col">STAR FIRST NAME</th>
+                                        <th scope="col">STAR LAST NAME</th>
+                                        <th scope="col">Button Goes Here</th>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <hr>
+<!--                  <button type="button" id="toggleForm" class="btn btn-default">Show/Hide Crazy Panel</button>
+                    <div id="adminArea">
+                        <div class="panel">
+                            <div class="panel-heading" style="background-color: #222942">Stalker Secret Admin Section</div>
+                            <div class="panel-body" style="background-color: #393b48">
+                                <div class="form-group">
+                                    <label class="control-label" for="formInput1001">Stalker Handle</label>
+                                    <input type="text" class="form-control" id="stalker-name" placeholder="enter your stralker handle">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="formInput1001">Star First Name</label>
+                                    <input type="text" class="form-control" id="star-first-name" placeholder="enter star's first name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="formInput1001">Star Last Name</label>
+                                    <input type="text" class="form-control" id="star-last-name" placeholder="enter star's last name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="formInput1001">My Fav Movie</label>
+                                    <input type="text" class="form-control" id="star-fav-mov" placeholder="enter their best movie">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="formInput1001">Stalk Worthiness</label>
+                                    <input type="text" class="form-control" id="stalk-value" placeholder="enter star's stalk value 1-10">
+                                </div>
+                                <button type="button" id="add-star" class="btn btn-success">Add to Stalk List</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        
+
 <!--This is the row for Giphy-->
         <div class="row">
             <div class= "col-lg-3">
@@ -131,51 +182,12 @@
                 <br>                   
             </div>
 
-
-
-
-
-
-
-
         </div>
 
-
-
-
-
- <!--       <div class="wrapper">
-            <img src="assets/images/stalker.jpg" class="img-rounded" "img-responsive" width="1140" height="720">
-
-        </div>-->
     </div>
 
-<!--    <script type="text/javascript">
-        var database = firebase.database();
-
-        $("#submit-button").click(function() {
-            event.preventDefault();
-            var newName = $("#name").val();
-            var newRole = $("#role").val();
-            var newStart = $("#start").val();
-            var newRate = $("#rate").val();
-            var emp = {
-                name: newName,
-                role: newRole,
-                start: newStart,
-                rate: newRate
-            }
-            console.log(emp);
-
-            database.ref('push').on('child_added',
-                function(childSnap, indx) {
-                    console.log(childSnap.val());
-                    console.log(indx);
-                });
-        });
-
-    </script>-->
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="./stalker.js"></script>   
 </body>
 
 
