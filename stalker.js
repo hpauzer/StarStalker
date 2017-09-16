@@ -20,17 +20,17 @@ var myData = firebase.database();
 
 // set up event listener
 $("#add-star").on("click", function (event) {
-
     event.preventDefault();
     displayStarInfo();
 
     var stalkerName = $("#stalker-name").val().trim();
     var starFirstName = $("#star-first-name").val().trim();
     var starLastName = $("#star-last-name").val().trim();
+
 //    var starFavMov = $("#star-fav-mov").val().trim();
 //    var stalkVal = $("#stalk-value").val().trim();
 
-    alert(starFirstName);
+//    alert(starFirstName);
 
     myData.ref("/Stars/").push({
         yName: stalkerName,
@@ -38,7 +38,6 @@ $("#add-star").on("click", function (event) {
         slName: starLastName,
 //        Movie: starFavMov,
 //        sValue: stalkVal
-
     });
 });
 
